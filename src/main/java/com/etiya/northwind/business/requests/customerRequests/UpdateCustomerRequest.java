@@ -29,4 +29,7 @@ public class UpdateCustomerRequest {
     @NotNull
     @NotBlank
     private String contactTitle;
+
+    private int cityId;
+    private int countryId;
 }

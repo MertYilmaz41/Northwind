@@ -28,4 +28,7 @@ public class UpdateEmployeeRequest {
     @NotNull
     @NotBlank
     private String title;
+
+    private int cityId;
+    private int countryId;
 }

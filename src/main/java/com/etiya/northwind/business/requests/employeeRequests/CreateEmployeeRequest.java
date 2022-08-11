@@ -30,4 +30,7 @@ public class CreateEmployeeRequest {
     private String title;
 
     private Integer reportToId;
+
+    private int cityId;
+    private int countryId;
 }

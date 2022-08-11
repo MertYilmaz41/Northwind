@@ -33,4 +33,11 @@ public class Employee {
     @Column(name = "reports_to")
     private Integer reportsTo;
 
+    @ManyToOne
+    @JoinColumn(name = "city_id")
+    private City city;
+
+    @ManyToOne
+    @JoinColumn(name = "country_id")
+    private Country country;
 }
