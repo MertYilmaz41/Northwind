@@ -38,4 +38,6 @@ public class Customer {
     @JoinColumn(name = "city_id")
     private City city;
 
+    @OneToMany(mappedBy = "customer")
+    private List<Cart> carts;
 }

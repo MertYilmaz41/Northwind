@@ -12,7 +12,8 @@ import javax.validation.constraints.*;
 public class CreateProductRequest {
 
     @NotNull
-    @Size(min = 1, max=10)
+    @Min(1)
+    @Max(1000)
     private int productId;
 
     @NotBlank

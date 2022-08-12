@@ -121,7 +121,7 @@ public class CategoryManager implements CategoryService {
         Category category = this.categoryRepository.findByCategoryName(categoryName);
         if (category!=null)
         {
-            throw new BusinessException("Category name exits");
+            throw new BusinessException("Category name exists");
         }
     }
 

@@ -15,7 +15,6 @@ public class CreateCustomerRequest {
 
     @NotNull
     @NotBlank
-    @Positive
     private String customerId;
 
     @NotNull

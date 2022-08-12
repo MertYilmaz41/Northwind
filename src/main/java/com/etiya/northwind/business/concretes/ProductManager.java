@@ -35,7 +35,7 @@ public class ProductManager implements ProductService {
 
     @Override
     public Result add(CreateProductRequest createProductRequest) {
-        checkIfCategoryLimitExceed(createProductRequest.getCategoryId());
+        checkIfCategoryLimitExceeds(createProductRequest.getCategoryId());
         checkIfProductNameExists(createProductRequest.getProductName());
         Product product = this.modelMapperService.forRequest().map(createProductRequest, Product.class);
         productRepository.save(product);
@@ -112,18 +112,12 @@ public class ProductManager implements ProductService {
 
 
 
-        private void checkIfCategoryLimitExceed(int categoryId)
+        private void checkIfCategoryLimitExceeds(int categoryId)
         {
             List<Product> result = this.productRepository.findByCategory_CategoryId(categoryId);
             if(result.size()>15)
             {
-                try
-                {
-                    throw new BusinessException("Category limit exceeded");
-                }
-                catch (Exception e) {
-                    e.printStackTrace();
-                }
+                throw new BusinessException("Category limit exceeded");
             }
         }
         private void checkIfProductNameExists(String productName)
