@@ -39,10 +39,7 @@ public class CartManager implements CartService {
         saveCartProducts(createCartRequest,cart);
         return  new SuccessResult();
 
-        //Order order = this.modelMapperService.forRequest().map(createOrderRequest, Order.class);
-        //orderRepository.save(order);
-        //saveOrderDetails(createOrderRequest, order);
-        //return new SuccessResult();
+
     }
 
     @Override
@@ -98,15 +95,4 @@ public class CartManager implements CartService {
     }
 
 
-    //private void saveOrderDetails(OrderRequest orderRequest, Order order) {
-        //List<OrderDetails> orderDetailsList = new ArrayList<>();
-        //for (CreateOrderDetailInOrderRequest detailRequest : orderRequest.getOrderDetailRequests()) {
-            //OrderDetails orderDetails = this.modelMapperService.forRequest().map(detailRequest, OrderDetails.class);
-            //orderDetails.setOrderId(order.getOrderId());
-            //orderDetails.setOrder(order);
-            //orderDetailsRepository.save(orderDetails);
-            //orderDetailsList.add(orderDetails);
-        //}
-        //order.setOrderDetails(orderDetailsList);
-    //}
 }

@@ -1,6 +1,6 @@
 package com.etiya.northwind.dataAccess.abstracts;
 
-import com.etiya.northwind.entities.concretes.Category;
+
 import com.etiya.northwind.entities.concretes.Supplier;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
